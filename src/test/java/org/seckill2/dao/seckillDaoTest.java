@@ -17,7 +17,7 @@ public class seckillDaoTest {
 
     @Autowired
     private seckillDao seckillDao;
-
+//
     @Test
     public void queryById() {
         long id=200L;
