@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.seckill2.dao.SeckillTwoDao">
+    <resultMap id="secT" type="SeckillTwo">
+        <id column="seckill_id" property="seckillId"/>
+        <result column="seckill_name" property="seckillName"/>
+
+    </resultMap>
+
+    <select id="queryById" resultMap="secT" >
+        SELECT seckill_id,seckill_name
+        FROM seckill2
+        WHERE seckill_id=#{id}
+    </select>
+</mapper>
